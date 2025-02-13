@@ -1,10 +1,11 @@
 import { Card, Button, Typography } from 'antd';
-
+import { useMediaQuery } from 'react-responsive';
 const ServiceCard = ({ img, price, title, description }) => {
+  const isSmall = useMediaQuery({ maxWidth: 990 });
   return (
     <Card
       style={{
-        width: 300,
+        maxWidth: 360,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -13,7 +14,13 @@ const ServiceCard = ({ img, price, title, description }) => {
       }}
     >
       <img src={img} style={{ width: '100%' }} />
-      <span style={{ color: '#f0b105', fontSize: 30, fontWeight: 700 }}>
+      <span
+        style={{
+          color: '#f0b105',
+          fontSize: isSmall ? 20 : 30,
+          fontWeight: 700,
+        }}
+      >
         от {price}
       </span>
       <span
@@ -36,7 +43,7 @@ const ServiceCard = ({ img, price, title, description }) => {
       </span>
       <Typography.Title
         style={{
-          fontSize: 20,
+          fontSize: isSmall ? 18 : 20,
           color: '#333333',
           marginTop: 12,
           textTransform: 'uppercase',

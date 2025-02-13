@@ -64,7 +64,7 @@ const menuItems = [
   },
 ];
 const { Step } = Steps;
-const services = [
+const plumbs = [
   {
     price: '100 000 cум',
     title: 'Установка сифона',
@@ -95,6 +95,33 @@ const services = [
     title: 'Монтаж  гвс хвс',
     description:
       'Если вам необходимо поменять трубы водоснабжения в квартире или частном доме, поручите это опытным профессионалам нашей компании. Выполним разводку трубопроводов любой сложности и гарантируем абсолютную безопасность эксплуатации водопровода для вас и ваших соседей.',
+  },
+];
+const electric = [
+  {
+    price: '8 000/12 000 сум',
+    title: 'Установка розетки (внутренняя/наружная)',
+    description: '',
+  },
+  {
+    price: '8 000/12 000 сум',
+    title: 'Установка выключателя (внутренний/наружный)',
+    description: '',
+  },
+  {
+    price: '50 000 сум',
+    title: 'Установка светильника',
+    description: '',
+  },
+  {
+    price: '100 000 сум',
+    title: 'Установка люстры',
+    description: '',
+  },
+  {
+    price: '65 000 сум',
+    title: 'Установка однополюсный/двухполюсный автомат',
+    description: '',
   },
 ];
 const about = [
@@ -188,8 +215,9 @@ function App() {
   const isSmall = useMediaQuery({ maxWidth: 576 });
   const isMiddle = useMediaQuery({ minWidth: 577, maxWidth: 1440 });
   const isHigh = useMediaQuery({ minWidth: 993 });
-  const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 990 });
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('1');
 
   const toggleDrawer = () => {
     setIsOpen((prev) => !prev);
@@ -262,10 +290,22 @@ function App() {
       </div>
     </>
   );
-  const servicesCard = services.map((item, index) => {
+  const plumbsCard = plumbs.map((item, index) => {
     return (
       <ServiceCard
         img={`/card${index + 1}.jpeg`}
+        description={item.description}
+        title={item.title}
+        price={item.price}
+        key={index}
+        bottom_text={item.bottom_description ?? ''}
+      />
+    );
+  });
+  const electricsCard = electric.map((item, index) => {
+    return (
+      <ServiceCard
+        img={`/elec${index + 1}.jpeg`}
         description={item.description}
         title={item.title}
         price={item.price}
@@ -287,8 +327,37 @@ function App() {
   const tabs = [
     {
       key: '1',
-      label: 'Сантехника',
-      children: <div className="tab-content">{servicesCard}</div>,
+      label: (
+        <Typography.Title
+          style={{
+            color: 'rgb(97, 95, 95)',
+            fontSize: 26,
+            textTransform: 'uppercase',
+            fontWeight: activeTab === '1' ? 600 : 400, // Меняем вес шрифта
+            transition: 'font-weight 0.3s ease', // Плавное изменение
+          }}
+        >
+          Сантехника
+        </Typography.Title>
+      ),
+      children: <div className="tab-content">{plumbsCard}</div>,
+    },
+    {
+      key: '2',
+      label: (
+        <Typography.Title
+          style={{
+            color: 'rgb(97, 95, 95)',
+            fontSize: 26,
+            textTransform: 'uppercase',
+            fontWeight: activeTab === '2' ? 600 : 400,
+            transition: 'font-weight 0.3s ease',
+          }}
+        >
+          Электрика
+        </Typography.Title>
+      ),
+      children: <div className="tab-content">{electricsCard}</div>,
     },
   ];
   return (
@@ -517,7 +586,7 @@ function App() {
               color: 'white',
             }}
           >
-            <a>Вызвать мастера на дом</a>
+            Вызвать мастера на дом
           </Button>
         </section>
         {/* oo */}
@@ -573,7 +642,7 @@ function App() {
             </ul>
           </ul>
         </section>
-        {/* services */}
+        {/* service */}
         <section
           id="plumbing"
           style={{
@@ -602,12 +671,18 @@ function App() {
               color: 'rgb(51, 51, 51)',
               fontSize: 20,
               maxWidth: 600,
+              marginBottom: 40,
             }}
           >
             Мы оказываем услуги по монтажу, замене, ремонту и переносу любой
             сантехники и электрики. Наши мастера справятся с любой задачей!
           </Typography.Text>
-          <Tabs items={tabs} tabPosition="top" />
+          <Tabs
+            items={tabs}
+            tabPosition="top"
+            onChange={(key) => setActiveTab(key)}
+            centered
+          />
         </section>
         {/* about us */}
         <section
@@ -850,7 +925,7 @@ function App() {
                   color: 'white',
                 }}
               >
-                <a>Вызвать мастера</a>
+                Вызвать мастера
               </Button>
             </div>
           </div>
