@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://santech-two.vercel.app/sitemap.xml
