@@ -63,7 +63,7 @@ const ServiceCard = ({ img, price, title, description }) => {
       </Typography.Text>
       <Button
         type="default"
-        href="tel:+998954050303"
+        href="tel:+998885011"
         style={{
           color: '#333333',
           background: '#ffc11e',

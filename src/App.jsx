@@ -233,7 +233,7 @@ function App() {
           marginBottom: 30,
         }}
       >
-        Master Profi
+        Santech Prof
       </div>
       {/* Список вместо Menu */}
       <ul
@@ -272,14 +272,14 @@ function App() {
             whiteSpace: 'nowrap',
           }}
         >
-          +998-95-405-0303
+          +998-88-50-11
         </span>
         <Button
           type="primary"
-          href="tel:+998954050303"
+          href="tel:+998885011"
           style={{
             background: '#ffc11e',
-            // borderColor: '#ffc11e',
+
             marginRight: 10,
             height: 40,
             flexShrink: 0,
@@ -333,8 +333,8 @@ function App() {
             color: 'rgb(97, 95, 95)',
             fontSize: 26,
             textTransform: 'uppercase',
-            fontWeight: activeTab === '1' ? 600 : 400, // Меняем вес шрифта
-            transition: 'font-weight 0.3s ease', // Плавное изменение
+            fontWeight: activeTab === '1' ? 600 : 400,
+            transition: 'font-weight 0.3s ease',
           }}
         >
           Сантехника
@@ -380,7 +380,7 @@ function App() {
               color: '#ffc11e',
             }}
           >
-            Master Profi
+            Santech Prof
           </div>
           {/* Список вместо Menu */}
           <ul
@@ -415,14 +415,14 @@ function App() {
                 whiteSpace: 'nowrap',
               }}
             >
-              +998-95-405-0303
+              +998-88-50-11
             </span>
             <Button
               type="primary"
-              href="tel:+998954050303"
+              href="tel:+998885011"
               style={{
                 background: '#ffc11e',
-                // borderColor: '#ffc11e',
+
                 marginRight: 10,
                 height: 40,
                 flexShrink: 0,
@@ -573,7 +573,7 @@ function App() {
             </span>
           </Typography.Text>
           <Button
-            href="tel:+998954050303"
+            href="tel:+998885011"
             style={{
               color: '#333333',
               fontWeight: '700',
@@ -698,12 +698,12 @@ function App() {
         >
           <hr
             style={{
-              backgroundColor: '#ffc11e', // Меняем фон линии
+              backgroundColor: '#ffc11e',
               opacity: 0.9,
               height: 1,
               width: '100%',
               border: 'none',
-              marginBottom: 28, // Убираем стандартную границу, которая может мешать
+              marginBottom: 28,
             }}
           />
           <Typography.Title
@@ -911,7 +911,7 @@ function App() {
               }}
             >
               <Button
-                href="tel:+998954050303"
+                href="tel:+998885011"
                 style={{
                   color: '#333333',
                   fontWeight: '700',
@@ -964,7 +964,7 @@ function App() {
                   maxWidth: 200,
                   maxHeight: 45,
                   backgroundColor: '#ffc11e',
-                  // textAlign: 'center',
+
                   padding: '12px 16px',
                 }}
                 key={index}
@@ -1022,30 +1022,9 @@ function App() {
         >
           Контакты
         </Typography.Title>
-        <a href="tel:+998954050303" style={{ fontSize: 25, fontWeight: 700 }}>
-          +998 95 405 03 03
+        <a href="tel:+998885011" style={{ fontSize: 25, fontWeight: 700 }}>
+          +998-88-50-11
         </a>
-        <p style={{ fontSize: 25, fontWeight: 700, marginBottom: 35 }}>
-          ronyyanc@mail.ru
-        </p>
-        <p
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            color: 'black',
-          }}
-        >
-          ООО "Bigmaster santex servis"
-        </p>
-        <p
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            color: 'black',
-          }}
-        >
-          ИНН 311543520
-        </p>
         <p
           style={{
             fontSize: 18,
@@ -1055,28 +1034,9 @@ function App() {
         >
           г. Ташкент
         </p>
-        <p
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            color: 'black',
-          }}
-        >
-          Мирободский район, Массив Куйлюк, 1
-        </p>
-        <p
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            color: 'black',
-          }}
-        >
-          ул. Муниса, 21
-        </p>
       </Footer>
     </Layout>
   );
 }
 
 export default App;
-// Sorry for bulls##t code
