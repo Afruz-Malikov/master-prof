@@ -272,11 +272,11 @@ function App() {
             whiteSpace: 'nowrap',
           }}
         >
-          +998-88-50-11
+          +998-99-888-50-11
         </span>
         <Button
           type="primary"
-          href="tel:+998885011"
+          href="tel:+998998885011"
           style={{
             background: '#ffc11e',
 
@@ -415,11 +415,11 @@ function App() {
                 whiteSpace: 'nowrap',
               }}
             >
-              +998-88-50-11
+              +998-99-888-50-11
             </span>
             <Button
               type="primary"
-              href="tel:+998885011"
+              href="tel:+998998885011"
               style={{
                 background: '#ffc11e',
 
@@ -573,7 +573,7 @@ function App() {
             </span>
           </Typography.Text>
           <Button
-            href="tel:+998885011"
+            href="tel:+998998885011"
             style={{
               color: '#333333',
               fontWeight: '700',
@@ -911,7 +911,7 @@ function App() {
               }}
             >
               <Button
-                href="tel:+998885011"
+                href="tel:+998998885011"
                 style={{
                   color: '#333333',
                   fontWeight: '700',
@@ -1022,8 +1022,8 @@ function App() {
         >
           Контакты
         </Typography.Title>
-        <a href="tel:+998885011" style={{ fontSize: 25, fontWeight: 700 }}>
-          +998-88-50-11
+        <a href="tel:+998998885011" style={{ fontSize: 25, fontWeight: 700 }}>
+          +998-99-888-50-11
         </a>
         <p
           style={{

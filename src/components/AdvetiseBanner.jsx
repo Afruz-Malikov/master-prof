@@ -146,7 +146,7 @@ const AdvertisementBanner = () => {
         <div style={{ marginBottom: 20 }}>
           <Button
             type="default"
-            href="tel:+998885011"
+            href="tel:+998998885011"
             style={{
               position: 'relative',
               color: '#333333',
